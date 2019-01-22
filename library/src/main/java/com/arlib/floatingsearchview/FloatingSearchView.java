@@ -78,7 +78,6 @@ import com.bartoszlipinski.viewpropertyobjectanimator.ViewPropertyObjectAnimator
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -682,9 +681,9 @@ public class FloatingSearchView extends FrameLayout {
                 } else {
                     switch (mLeftActionMode) {
                         case LEFT_ACTION_MODE_SHOW_HAMBURGER:
-                            if(mLeftMenuClickListener != null){
+                            if (mLeftMenuClickListener != null) {
                                 mLeftMenuClickListener.onClick(mLeftAction);
-                            }else {
+                            } else {
                                 toggleLeftMenu();
                             }
                             break;
@@ -781,7 +780,7 @@ public class FloatingSearchView extends FrameLayout {
      *
      * @return
      */
-    public List<MenuItemImpl> getCurrentMenuItems(){
+    public List<MenuItemImpl> getCurrentMenuItems() {
         return mMenuView.getCurrentMenuItems();
     }
 
@@ -826,31 +825,31 @@ public class FloatingSearchView extends FrameLayout {
     }
 
     /**
-         * Sets the key listener to be used with this TextView.  This can be null
-         * to disallow user input.  Note that this method has significant and
-         * subtle interactions with soft keyboards and other input method:
-         * see {@link KeyListener#getInputType() KeyListener.getInputType()}
-         * for important details.  Calling this method will replace the current
-         * content type of the text view with the content type returned by the
-         * key listener.
-         * <p>
-         * Be warned that if you want a TextView with a key listener or movement
-         * method not to be focusable, or if you want a TextView without a
-         * key listener or movement method to be focusable, you must call
-         * {@link #setFocusable} again after calling this to get the focusability
-         * back the way you want it.
-         *
-         * @attr ref android.R.styleable#TextView_numeric
-         * @attr ref android.R.styleable#TextView_digits
-         * @attr ref android.R.styleable#TextView_phoneNumber
-         * @attr ref android.R.styleable#TextView_inputMethod
-         * @attr ref android.R.styleable#TextView_capitalize
-         * @attr ref android.R.styleable#TextView_autoText
-         */
-        void setKeyListener(KeyListener input) {
-            mSearchInput.setKeyListener(input);
-        }
-    
+     * Sets the key listener to be used with this TextView.  This can be null
+     * to disallow user input.  Note that this method has significant and
+     * subtle interactions with soft keyboards and other input method:
+     * see {@link KeyListener#getInputType() KeyListener.getInputType()}
+     * for important details.  Calling this method will replace the current
+     * content type of the text view with the content type returned by the
+     * key listener.
+     * <p>
+     * Be warned that if you want a TextView with a key listener or movement
+     * method not to be focusable, or if you want a TextView without a
+     * key listener or movement method to be focusable, you must call
+     * {@link #setFocusable} again after calling this to get the focusability
+     * back the way you want it.
+     *
+     * @attr ref android.R.styleable#TextView_numeric
+     * @attr ref android.R.styleable#TextView_digits
+     * @attr ref android.R.styleable#TextView_phoneNumber
+     * @attr ref android.R.styleable#TextView_inputMethod
+     * @attr ref android.R.styleable#TextView_capitalize
+     * @attr ref android.R.styleable#TextView_autoText
+     */
+    public void setKeyListener(KeyListener input) {
+        mSearchInput.setKeyListener(input);
+    }
+
     /**
      * Sets whether the search will lose focus when a suggestion item is clicked.
      *
